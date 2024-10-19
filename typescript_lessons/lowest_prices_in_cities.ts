@@ -13,7 +13,7 @@ function findLowestPrices(inputArray: string[]): void {
         console.log(`${product} -> ${products[product].price} (${products[product].town})`);
     }
 }
-const input = ['Sample Town | Sample Product | 1000',
+const input1 = ['Sample Town | Sample Product | 1000',
     'Sample Town | Orange | 2',
     'Sample Town | Peach | 1',
     'Sofia | Orange | 3',

@@ -12,7 +12,7 @@ function findLowestPrices(inputArray) {
         console.log("".concat(product, " -> ").concat(products[product].price, " (").concat(products[product].town, ")"));
     }
 }
-var input = ['Sample Town | Sample Product | 1000',
+var input1 = ['Sample Town | Sample Product | 1000',
     'Sample Town | Orange | 2',
     'Sample Town | Peach | 1',
     'Sofia | Orange | 3',

@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+      "target": "ES6",
+      "module": "commonjs",
+      "outDir": "Greeter/dist",
+      "rootDir": "Greeter/src",
+      "strict": true
+  }
+}
