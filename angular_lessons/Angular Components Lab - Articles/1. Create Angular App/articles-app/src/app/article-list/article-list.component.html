@@ -1,0 +1,6 @@
+<div *ngFor="let article of articles">
+    <h2>{{ article.title }}</h2>
+    <p>{{ article.description }}</p>
+    <p>Author: {{ article.author }}</p>
+    <img [src]="article.imageUrl" alt="{{ article.title }}" />
+  </div>

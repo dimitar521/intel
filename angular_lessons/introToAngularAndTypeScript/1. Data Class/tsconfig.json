@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    
+    "target": "es6",                                 
+    "module": "commonjs",
+    "sourceMap": true,
+    "outDir": "1. Data Class/dist", 
+    "rootDir": "1. Data Class/src"                        
+  
+  }
+}
