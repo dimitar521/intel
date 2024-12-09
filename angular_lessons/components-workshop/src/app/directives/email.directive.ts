@@ -1,5 +1,6 @@
 import { Directive, Input } from '@angular/core';
 import { AbstractControl, NG_VALIDATORS, ValidationErrors, Validator } from '@angular/forms';
+import { emailValidator } from '../utils/email.validator';
 
 @Directive({
   selector: '[appEmail]',
@@ -18,8 +19,9 @@ export class EmailDirective implements Validator{
   constructor() { }
 
   validate(control: AbstractControl): ValidationErrors | null {
-    console.log(this.appEmail);
-    return null;
+  
+    const validatorFn = emailValidator(this.appEmail);
+    return validatorFn(control);
   }
 
 }
