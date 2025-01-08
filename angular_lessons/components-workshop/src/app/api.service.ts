@@ -15,19 +15,18 @@ export class ApiService {
      
   // Create a new theme
     createTheme(themeName: string, postText: string): Observable<Theme> {
-      const { apiUrl } = environment;
+    
       const payload = {
        themeName,
-       postText,
-       created_at: new Date().toISOString() // Optional: Include a timestamp
-    };
+       postText};
+  
     
-      return this.http.post<Theme>(`${apiUrl}/themes`, payload);
+      return this.http.post<Theme>(`/api/themes`, payload);
   }
 
     getPosts(limit?: number) {
       const { apiUrl } = environment;
-      let url = `${apiUrl}/posts`;
+      let url = `/api/posts`;
       if(limit){
         url += `?limit=${limit}`;
       }
@@ -35,12 +34,12 @@ export class ApiService {
     }
     getThemes(){
       const { apiUrl } = environment;
-      return this.http.get<Theme[]>(`${apiUrl}/themes`);
+      return this.http.get<Theme[]>(`/api/themes`);
     }
 
     getSingleTheme(id: string) {
       const { apiUrl } = environment;
-      return this.http.get<Theme>(`${apiUrl}/themes/${id}`)
+      return this.http.get<Theme>(`/api/themes/${id}`)
     }
   }
 

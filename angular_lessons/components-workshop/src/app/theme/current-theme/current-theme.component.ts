@@ -18,7 +18,7 @@ export class CurrentThemeComponent implements OnInit {
   ngOnInit(): void {
 
     // this.route.params.subscribe((data) => {
-    //   console.log(data['themeId']);
+    
     // });
     const id = this.route.snapshot.params['themeId'];
 

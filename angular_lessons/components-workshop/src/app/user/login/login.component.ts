@@ -24,8 +24,15 @@ if(form.invalid) {
   console.error('Invalid Login Form!')
   return;  
 }
-this.userService.login();
-this.router.navigate(['/home'])
+const { email, password } = form.value;
+
+console.log(email, password);
+
+this.userService.login(email, password).subscribe(()=>{
+
+})
+
+this.router.navigate(['/themes']);
 }
 }
 
